@@ -30,3 +30,68 @@ for donne in donnees_brutes:
     }
     final_liste.append(utilisateur)
 print(final_liste)
+
+
+
+drilling_machine_two ={
+  "machine_id": "DM-2",
+  "name": "Land Rover 200",
+  "location": {
+    "latitude": 37.7749,
+    "longitude": -107.9090,
+    "region": "San Juan Basin",
+    "country": "USA"
+  },
+  "status": "Under Maintenance",
+  "specifications": {
+    "type": "Onshore",
+    "depth_capacity_miles": 7,
+    "drilling_speed_miles_per_day": 0.3,
+    "crew_size": 25,
+    "power_source": "Electric"
+  },
+  "last_maintenance_date": "2024-07-15",
+  "next_maintenance_due": "2025-01-15"
+}
+
+depth_capacity_miles = drilling_machine_two["specifications"]["depth_capacity_miles"]
+depth_capacity_meters = depth_capacity_miles * 1609.34
+drilling_machine_two["specifications"]["depth_capacity_meters"] = depth_capacity_meters
+drilling_speed_miles_per_day = drilling_machine_two["specifications"]["drilling_speed_miles_per_day"]
+drilling_speed_meters_per_day = drilling_speed_miles_per_day * 1609.34
+drilling_machine_two["specifications"]["drilling_speed_meters_per_day"] = drilling_speed_meters_per_day
+
+
+last_maintenance_date = drilling_machine_two["last_maintenance_date"]
+x= last_maintenance_date.split("-")
+year = x[0]
+month = x[1]
+day = x[2]
+last_maintenance_date_formatted =f"{day}/{month}/{year}"
+drilling_machine_two["last_maintenance_date_formatted"] = last_maintenance_date_formatted
+
+
+next_maintenance_due = drilling_machine_two["next_maintenance_due"]
+y = next_maintenance_due.split("-")
+next_year = y[0]
+next_month = y[1]
+next_day = y[2]
+next_maintenance_due_formatted = f"{next_day}/{next_month}/{next_year}"
+drilling_machine_two["next_maintenance_due"] = next_maintenance_due_formatted
+
+
+drilling_machine_two["contact_information"] = {
+    "operator_company": None,
+    "contact_person": None,
+    "phone": None,
+    "email": None
+  }
+
+
+ch1 = drilling_machine_two["machine_id"][:3]
+ch2 = drilling_machine_two["machine_id"][-1].zfill(3)
+ch_final = ch1 + ch2
+drilling_machine_two["machine_id"] = ch_final
+
+
+print (drilling_machine_two)
