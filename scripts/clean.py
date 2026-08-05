@@ -95,3 +95,21 @@ drilling_machine_two["machine_id"] = ch_final
 
 
 print (drilling_machine_two)
+
+
+my_list = [1, 2, 3, 4, 5, 6]
+new_list=[i*i for i in my_list if (i%2==0) and (i!=6)]
+
+print(new_list)
+
+
+def my_function(x):
+    if x < 0:
+        return "Negative"
+    elif x == 0:
+        return "Zero"
+    else:
+        return "Positive"
+      
+print(my_function(10))
+
