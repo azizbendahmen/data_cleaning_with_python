@@ -113,3 +113,15 @@ def my_function(x):
       
 print(my_function(10))
 
+def my_func(*x):
+    print("Arguments passed:", x)
+  
+my_func(1, 2, 3, 4, 5)
+
+
+def my_func2(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")  
+        
+
+my_func2(name="Alice", age=30, city="New York")
