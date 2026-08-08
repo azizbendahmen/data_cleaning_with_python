@@ -137,3 +137,31 @@ print(var)
 add = lambda a, b: a + b
 result = add(5, 10) 
 print(result)
+
+
+
+
+my_list =[1, 2, 3, 4, 5]
+
+def square (x):
+    return x * x
+
+result = list(map(square , my_list))
+print(result)
+
+
+
+def square2 (x):
+    if(x%2==0):
+        return x*x
+    
+    
+result2 = list(filter(square2 , my_list))
+print(result2)
+
+
+def add(a, b):
+    return a + b
+
+result = reduce(add, my_list)
+print(result)  
