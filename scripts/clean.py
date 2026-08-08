@@ -165,3 +165,17 @@ def add(a, b):
 
 result = reduce(add, my_list)
 print(result)  
+
+
+x = "1"
+
+try:
+    if (x<0):
+        print("Negative")
+    else : 
+        print("Positive")
+except Exception as e :
+    print(f"Error: {e}") 
+finally:
+    print("Execution completed.")
+    
