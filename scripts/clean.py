@@ -125,3 +125,15 @@ def my_func2(**kwargs):
         
 
 my_func2(name="Alice", age=30, city="New York")
+
+
+def addition(a, b):
+    return a + b
+
+var = addition(5, 10)
+print(var)
+
+
+add = lambda a, b: a + b
+result = add(5, 10) 
+print(result)
