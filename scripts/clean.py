@@ -179,3 +179,37 @@ except Exception as e :
 finally:
     print("Execution completed.")
     
+
+
+class employee():
+    
+    company_name = "Tech Solutions Inc."
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def change(self, company_name):
+        employee.company_name = company_name
+
+    def display_info(self):
+        print(f"Name: {self.name}, Age: {self.age}, Company: {self.company_name}")
+    
+    @classmethod
+    def change_company(cls, company_name):
+        cls.company_name = company_name
+    
+    @staticmethod
+    def addition(a, b):
+        print(a + b)
+
+emp1 = employee("John", 30)
+emp1.display_info()
+emp2 = employee("Alice", 28)
+emp2.change("Innovative Tech Ltd.") 
+emp1.display_info()
+
+emp1.addition(5, 10)
+
+emp1.change_company("NextGen Solutions")
+emp2.display_info()
