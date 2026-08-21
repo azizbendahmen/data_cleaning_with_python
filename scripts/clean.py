@@ -192,8 +192,19 @@ class employee():
     def change(self, company_name):
         employee.company_name = company_name
 
-    def display_info(self):
+    
+    #getter
+    @property
+    def info(self):
         print(f"Name: {self.name}, Age: {self.age}, Company: {self.company_name}")
+    
+    #setter
+    @info.setter
+    def info(self, value):
+        self.name = value[0]
+        self.age = value[1]
+        
+        
     
     @classmethod
     def change_company(cls, company_name):
@@ -204,12 +215,14 @@ class employee():
         print(a + b)
 
 emp1 = employee("John", 30)
-emp1.display_info()
+emp1.info
 emp2 = employee("Alice", 28)
 emp2.change("Innovative Tech Ltd.") 
-emp1.display_info()
+emp1.info
 
 emp1.addition(5, 10)
 
-emp1.change_company("NextGen Solutions")
-emp2.display_info()
+
+
+emp1.info = ["Bob", 35]
+emp1.info
