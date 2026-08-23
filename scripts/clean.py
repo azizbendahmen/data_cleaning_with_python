@@ -226,3 +226,28 @@ emp1.addition(5, 10)
 
 emp1.info = ["Bob", 35]
 emp1.info
+
+
+
+class pere():
+    def __int__(self, name):
+        self.name = name            
+    
+    def info(self):
+        print(f"Person: {self.name}")
+        
+        
+class fils(pere):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def info(self):
+        print(f"Person: {self.name}, Age: {self.age}")
+    
+    def super_info(self):
+        super().info()
+
+person1 = fils("Charlie", 25)
+person1.info()  
+person1.super_info()
