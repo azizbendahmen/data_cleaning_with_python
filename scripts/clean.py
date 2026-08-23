@@ -251,3 +251,19 @@ class fils(pere):
 person1 = fils("Charlie", 25)
 person1.info()  
 person1.super_info()
+
+
+# Écriture
+chemin_fichier = "C:\\Users\\benda\\Downloads\\mon_pipeline.log\\mon_pipeline.txt"
+with open(chemin_fichier, "w", encoding="utf-8") as f:
+    f.write("INFO: Début du pipeline.\n")
+    f.write("INFO: Ingestion terminée.\n")
+# Append
+with open(chemin_fichier, "a", encoding="utf-8") as f:
+    f.write("INFO: Transformation terminée.\n")
+    f.write("INFO: Chargement terminé.\n")
+    
+# Lecture
+with open(chemin_fichier, "r", encoding="utf-8") as f:
+    contenu = f.read()
+    print(contenu)
