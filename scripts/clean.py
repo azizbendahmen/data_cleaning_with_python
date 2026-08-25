@@ -267,3 +267,21 @@ with open(chemin_fichier, "a", encoding="utf-8") as f:
 with open(chemin_fichier, "r", encoding="utf-8") as f:
     contenu = f.read()
     print(contenu)
+
+
+
+
+donnees_utilisateurs = [
+    {"nom": "Alice", "age": 30, "ville": "Paris"},
+    {"nom": "Bob",   "age": 25, "ville": "Lyon"}
+]
+
+with open("utilisateurs.csv", "w", newline="", encoding="utf-8") as f:
+    # On définit les colonnes
+    colonnes = ["nom", "age", "ville"]
+    # Création de l'objet DictWriter
+    writer = csv.DictWriter(f, fieldnames=colonnes)
+    writer.writeheader()
+    writer.writerows(donnees_utilisateurs)
+
+print("Fichier CSV créé avec succès.")
