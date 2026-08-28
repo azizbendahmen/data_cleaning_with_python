@@ -285,3 +285,12 @@ with open("utilisateurs.csv", "w", newline="", encoding="utf-8") as f:
     writer.writerows(donnees_utilisateurs)
 
 print("Fichier CSV créé avec succès.")
+
+
+# Lecture d'un fichier CSV
+with open("utilisateurs.csv", "r", encoding="utf-8") as f:
+    # Création de l'objet DictReader
+    reader = csv.DictReader(f)
+    for ligne in reader:
+        # Chaque 'ligne' est un dictionnaire.
+        print(f"Nom: {ligne['nom']}, Age brut: {ligne['age']} (type: {type(ligne['age'])})")
