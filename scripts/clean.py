@@ -1,4 +1,6 @@
 from functools import reduce
+import csv
+
 
 donnees_brutes = [
     "Jean, 45, Paris, ACTIF",
