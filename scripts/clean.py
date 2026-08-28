@@ -1,3 +1,5 @@
+from functools import reduce
+
 donnees_brutes = [
     "Jean, 45, Paris, ACTIF",
     "Marie, 32, Lyon, INACTIF",
