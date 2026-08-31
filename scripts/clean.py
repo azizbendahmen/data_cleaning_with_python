@@ -111,6 +111,40 @@ resultat = jesus(pains, multiplication)
 print(f"Résultat de la multiplication des pains : {resultat}")
 
 
+def convert_miles_to_meters(machine :dict) -> dict:
+    specs = machine["specifications"]
+    
+    depth_capacity_miles = specs["depth_capacity_miles"]
+    depth_capacity_meters = depth_capacity_miles * 1609.34
+    specs["depth_capacity_meters"] = depth_capacity_meters
+
+    drilling_speed_miles_per_day = specs["drilling_speed_miles_per_day"]
+    drilling_speed_meters_per_day = drilling_speed_miles_per_day * 1609.34
+    specs["drilling_speed_meters_per_day"] = drilling_speed_meters_per_day
+    
+    del specs["depth_capacity_miles"]
+    del specs["drilling_speed_miles_per_day"]   
+
+    return machine
+
+updated_machine = convert_miles_to_meters(drilling_machine_two)
+print(updated_machine)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 my_list = [1, 2, 3, 4, 5, 6]
 new_list=[i*i for i in my_list if (i%2==0) and (i!=6)]
