@@ -1,5 +1,6 @@
 from functools import reduce
 import csv
+from typing import Dict
 
 
 donnees_brutes = [
@@ -99,6 +100,16 @@ drilling_machine_two["machine_id"] = ch_final
 
 
 print (drilling_machine_two)
+
+def jesus(pains :int , multiplication :int) -> int:
+    return pains * multiplication
+
+pains = 5
+multiplication = 2
+
+resultat = jesus(pains, multiplication)
+print(f"Résultat de la multiplication des pains : {resultat}")
+
 
 
 my_list = [1, 2, 3, 4, 5, 6]
