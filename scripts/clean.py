@@ -172,7 +172,15 @@ print(updated_machine)
 
 
 
+def modify_machine_id(machine :dict) -> dict:
+    id_letter, id_number = machine["machine_id"].split("-")
+    id_number_padded = id_number.zfill(3)
+    machine["machine_id"] = f"{id_letter}-{id_number_padded}"
+    
+    return machine
 
+updated_machine = modify_machine_id(drilling_machine_two)
+print(updated_machine)
 
 
 
