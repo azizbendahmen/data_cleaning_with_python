@@ -158,6 +158,19 @@ print(updated_machine)
 
 
 
+def ajout_contact_info(machine :dict) -> dict:
+    machine["contact_information"] = {
+        "operator_company": None,
+        "contact_person": None,
+        "phone": None,
+        "email": None
+    }
+    return machine
+
+updated_machine = ajout_contact_info(drilling_machine_two)
+print(updated_machine)
+
+
 
 
 
