@@ -132,7 +132,28 @@ print(updated_machine)
 
 
 
+def convert_date_format(machine :dict) -> dict:
+    last_date= machine["last_maintenance_date"]
+    clean_last_date = last_date.split("-")
+    year = clean_last_date[0] 
+    month = clean_last_date[1]
+    day = clean_last_date[2]
+    last_maintenance_date_formatted =f"{day}/{month}/{year}"
+    machine["last_maintenance_date_formatted"] = last_maintenance_date_formatted
+    
+    next_date = machine["next_maintenance_due"]
+    clean_next_date = next_date.split("-")
+    next_year = clean_next_date[0]
+    next_month = clean_next_date[1]
+    next_day = clean_next_date[2]
+    next_maintenance_due_formatted = f"{next_day}/{next_month}/{next_year}"
+    machine["next_maintenance_due"] = next_maintenance_due_formatted
+    
 
+    return machine
+
+updated_machine = convert_date_format(drilling_machine_two)
+print(updated_machine)
 
 
 
