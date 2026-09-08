@@ -219,6 +219,10 @@ class Warehouse:
     def compute_total_items(self) -> int:
         return sum(self.storage.values())
 
+    def compute_mean_items(self) -> float:
+        return self.compute_total_items() / len(self.storage)
+
+
 
 items = {"item1": 24, "item2": 42, "item3": 56}
 warehouse_one = Warehouse("Paris", "Tom Felton", items)
