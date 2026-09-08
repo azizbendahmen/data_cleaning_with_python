@@ -186,6 +186,29 @@ print(updated_machine)
 
 
 
+class DrillingMachine:
+
+    def __init__(
+        self,
+        machine_id: str,
+        name: str,
+        location: str,
+        status: str,
+        specifications: Dict[str, str],
+        last_maintenance_date: str,
+        next_maintenance_due: str,
+        contact_information: Dict[str, str],
+    ) -> None:
+        self.machine_id = machine_id
+        self.name = name
+        self.location = location
+        self.status = status
+        self.specifications = specifications
+        self.last_maintenance_date = last_maintenance_date
+        self.next_maintenance_due = next_maintenance_due
+        self.contact_information = contact_information
+
+
 
 
 my_list = [1, 2, 3, 4, 5, 6]
@@ -269,7 +292,9 @@ except Exception as e :
     print(f"Error: {e}") 
 finally:
     print("Execution completed.")
-    
+
+
+
 
 
 class employee():
