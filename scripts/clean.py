@@ -209,6 +209,22 @@ class DrillingMachine:
         self.contact_information = contact_information
 
 
+class Warehouse:
+
+    def __init__(self, location: str, manager: str, storage: Dict[str, int]) -> None:
+        self.location = location
+        self.manager = manager
+        self.storage = storage
+
+    def compute_total_items(self) -> int:
+        return sum(self.storage.values())
+
+
+items = {"item1": 24, "item2": 42, "item3": 56}
+warehouse_one = Warehouse("Paris", "Tom Felton", items)
+
+total_items = warehouse_one.compute_total_items()
+print(total_items)
 
 
 my_list = [1, 2, 3, 4, 5, 6]
