@@ -252,11 +252,14 @@ for i, item in enumerate(["poires", "pommes", "oranges"]):
 employee_ids = [2, 3, 42]
 employee_names = ["Perceval", "Karadoc", "Kadoc"]
 
-
-
 i = 0
 for i, name in enumerate(employee_names):
     print(f"{employee_ids[i]} :", name)
+
+
+for id , name in zip (employee_ids , employee_names):
+    print(f"{id} : {name}")
+
 
 
 def my_function(x):
