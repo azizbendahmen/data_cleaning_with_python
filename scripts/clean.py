@@ -262,6 +262,15 @@ for id , name in zip (employee_ids , employee_names):
 
 
 
+Countries = ["France", "Germany", "Italy"]
+Capitals = ["Paris", "Berlin", "Rome"]
+
+for index , (countrie , capital) in enumerate(zip (Countries , Capitals)):
+    print(f"{index} {countrie} : {capital}")
+    
+
+
+
 def my_function(x):
     if x < 0:
         return "Negative"
