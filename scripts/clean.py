@@ -238,11 +238,16 @@ print(new_list)
 
 
 i = 0
-
 for item in ["poires", "pommes", "oranges"]:
     print(i)
     print(item)
     i += 1
+
+
+for i, item in enumerate(["poires", "pommes", "oranges"]):
+    print(i)
+    print(item)
+
 
 def my_function(x):
     if x < 0:
