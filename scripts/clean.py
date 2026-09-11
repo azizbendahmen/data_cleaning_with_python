@@ -249,6 +249,16 @@ for i, item in enumerate(["poires", "pommes", "oranges"]):
     print(item)
 
 
+employee_ids = [2, 3, 42]
+employee_names = ["Perceval", "Karadoc", "Kadoc"]
+
+
+
+i = 0
+for i, name in enumerate(employee_names):
+    print(f"{employee_ids[i]} :", name)
+
+
 def my_function(x):
     if x < 0:
         return "Negative"
