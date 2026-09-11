@@ -237,6 +237,13 @@ new_list=[i*i for i in my_list if (i%2==0) and (i!=6)]
 print(new_list)
 
 
+i = 0
+
+for item in ["poires", "pommes", "oranges"]:
+    print(i)
+    print(item)
+    i += 1
+
 def my_function(x):
     if x < 0:
         return "Negative"
